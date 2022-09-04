@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="countryInfo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <title>countryInfo</title>
+</head>
+<body>
+
+    <header id="countries">
+		<h2>World Countries Data</h2>
+		<p class="subtitle">Currently we have 250 countries</p>
+		<p class="feedback"></p>
+	</header>
+    <main>
+        <div class="inputFeild">
+            <input type="text" name="input" id="inputF" placeholder="Search countries by Name , Capital and Language">
+        </div>
+        
+        <div class="buttons">
+            <button id="nameBtn">Name</button>
+            <button id="capitalBtn">Capital</button>
+            <button id="populationBtn">Population</button>
+        </div>
+        <div class="wrapper">
+            <div id="countryBlockWrapper">
+               
+            </div>
+        </div>
+        <div class="wrapperTwo">
+			<div class="graph-buttons">
+				<button id="population">Population</button>
+				<button id="languages">Languages</button>
+			</div>
+			<p id="message"></p>
+			<h4 class="graph-title"></h4>
+			<div id="graphs">
+				<!-- <div class="graph-wrapper" id="stat">
+					<p id="firstP">English</p>
+					<div id="barDiv">
+						<div id="innerBarDiv" style="width: 80%;" ></div>
+					</div>
+					<p id="secP"> 91</p>
+				</div> -->
+			
+			
+			</div>
+		</div>
+        <div class="bottomDiv"></div>
+    </main>
+
+
+    <script src="countryInfo.js"></script>
+</body>
+</html>
