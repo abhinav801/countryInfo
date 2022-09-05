@@ -596,9 +596,6 @@ let countryBlockWrapper = document.getElementById('countryBlockWrapper');
 let filteredArr1 =[]
 let filteredArr2 =[]
 let filteredArr3 =[]
-let count =  []
-let globArr = []
-let cPopulation = []
 
 // global variable
 let totPopulation =7758589152;
@@ -610,7 +607,9 @@ for( let i = 0 ; i < 21 ; ++i){
 	<img id="flag" src=${countryDataCopy[i].flag} height="45px">
 	<p id="countryName">${countryDataCopy[i].name}</p>
 	<p id="countryCapital">Capital: ${countryDataCopy[i].capital}</p>
-	<p id="countryLang">Language:  ${countryDataCopy[i].languages[0]}</p>
+	<p id="countryLang">Language:  ${countryDataCopy[i].languages.map((item) => {
+		return item + ' '
+	}) }</p>
 	<p id="countryPop">Population:  ${countryDataCopy[i].population}</p>
 </div>`
 
@@ -642,7 +641,9 @@ nameBtn.addEventListener('click' , function(){
 		<img id="flag" src=${countryDataCopy[i].flag} height="45px">
 		<p id="countryName">${countryDataCopy[i].name}</p>
 		<p id="countryCapital">Capital: ${countryDataCopy[i].capital}</p>
-		<p id="countryLang">Language:  ${countryDataCopy[i].languages[0]}</p>
+		<p id="countryLang">Language:  ${countryDataCopy[i].languages.map((item) => {
+			return item + ' '
+		}) }</p>
 		<p id="countryPop">Population:  ${countryDataCopy[i].population}</p>
 	</div>`
 	}
@@ -673,7 +674,9 @@ capitalBtn.addEventListener('click' , function(){
 		<img id="flag" src=${countryDataCopy[i].flag} height="45px">
 		<p id="countryName">${countryDataCopy[i].name}</p>
 		<p id="countryCapital">Capital: ${countryDataCopy[i].capital}</p>
-		<p id="countryLang">Language:  ${countryDataCopy[i].languages[0]}</p>
+		<p id="countryLang">Language:  ${countryDataCopy[i].languages.map((item) => {
+			return item + ' '
+		}) }</p>
 		<p id="countryPop">Population:  ${countryDataCopy[i].population}</p>
 	</div>`
 	}
@@ -694,7 +697,9 @@ populationBtn.addEventListener('click' , function(){
 			<img id="flag" src=${countryDataCopy[i].flag} height="45px">
 			<p id="countryName">${countryDataCopy[i].name}</p>
 			<p id="countryCapital">Capital: ${countryDataCopy[i].capital}</p>
-			<p id="countryLang">Language:  ${countryDataCopy[i].languages[0]}</p>
+			<p id="countryLang">Language:  ${countryDataCopy[i].languages.map((item) => {
+				return item + ' '
+			}) }</p>
 			<p id="countryPop">Population:  ${countryDataCopy[i].population}</p>
 		</div>`
 		}
@@ -736,7 +741,9 @@ console.log(value)
 		<img id="flag" src=${filteredArr1[i].flag} height="45px">
 		<p id="countryName">${filteredArr1[i].name}</p>
 		<p id="countryCapital">Capital: ${filteredArr1[i].capital}</p>
-		<p id="countryLang">Language:  ${filteredArr1[i].languages[0]}</p>
+		<p id="countryLang">Language:  ${filteredArr1[i].languages.map((item) => {
+			return item + ' '
+		}) }</p>
 		<p id="countryPop">Population:  ${filteredArr1[i].population}</p>
 	</div>`
 	}
@@ -754,7 +761,9 @@ console.log(value)
 			<img id="flag" src=${filteredArr2[i].flag} height="45px">
 			<p id="countryName">${filteredArr2[i].name}</p>
 			<p id="countryCapital">Capital: ${filteredArr2[i].capital}</p>
-			<p id="countryLang">Language:  ${filteredArr2[i].languages[0]}</p>
+			<p id="countryLang">Language:  ${filteredArr2[i].languages.map((item) => {
+				return item + ' '
+			}) }</p>
 			<p id="countryPop">Population:  ${filteredArr2[i].population}</p>
 		</div>`
 		}
@@ -764,7 +773,7 @@ console.log(value)
 		nameBtn.classList.remove('bordershow')
 		capitalBtn.classList.remove('bordershow');
 		populationBtn.classList.remove('bordershow')
-		
+
 		let len = filteredArr3.length > 21 ? 21: filteredArr3.length;
 		console.log(filteredArr3)
 		countryBlockWrapper.innerHTML="";
@@ -774,7 +783,9 @@ console.log(value)
 			<img id="flag" src=${filteredArr3[i].flag} height="45px">
 			<p id="countryName">${filteredArr3[i].name}</p>
 			<p id="countryCapital">Capital: ${filteredArr3[i].capital}</p>
-			<p id="countryLang">Language:  ${filteredArr3[i].languages[0]}</p>
+			<p id="countryLang">Language:  ${filteredArr3[i].languages.map((item) => {
+				return item + ' '
+			}) }</p>
 			<p id="countryPop">Population:  ${filteredArr3[i].population}</p>
 		</div>`
 		}
